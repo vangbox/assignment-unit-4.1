@@ -54,9 +54,9 @@ console.log('muliplying, 14, 32 and 99 =', multiplyThree(14, 32, 99));
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
   if ( number > 0 ){
-    return;
+    return true;
   }
-    return;
+    return false;
 }
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
@@ -68,15 +68,27 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 function getLast( array ) {
-
-}
+  
+  return array[array.length -1]; 
+  }
+console.log(getLast([3,4,5,6]));
+console.log(getLast([]));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find( value, array ){
-  
+  for (let i = 0; i < array.length; i++) {
+    if (value===array[i]) {
+      return true;
+    }
+  }
+  return false;
 }
+
+console.log(find(34, [3,4,5]));
+console.log(find(6, [1,3,6,5,4,0]));
+
 
 // ----------------------
 // Stretch Goals
