@@ -6,31 +6,49 @@ console.log('***** Function Practice *****')
 
 // 1. Function to return 'Hello World!'
 function hello() {
-  return 'Hello World!';
+  console.log('Hello World');
 }
+
 // Call the function to test
 console.log('Test - should say "Hello World!"', hello());
 
+hello();
 
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName( name ) {
-  return;
+  console.log('in helloName');
+  let myName = name;
+  return myName;
 }
 // Remember to call the function to test
-
+helloName();
+console.log("Hello", helloName("Jake"));
 
 // 3. Function to add two numbers together & return the result
-function addNumbers( firstNumber ) {
-  // return firstNumber + secondNumber;
-}
+function addNumbers(firstNumber, secondNumber) {
+  console.log('in addNumbers');
+  let totalSum = firstNumber + secondNumber;
 
+  // return firstNumber + secondNumber;
+  return totalSum;
+ 
+} //end of addNumbers
+
+addNumbers();
+console.log('adding 3 and 4 =', addNumbers(3,4));
+console.log('adding 8 and 9 =', addNumbers(8,9));
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree( ){
+function multiplyThree(firstNumber, secondNumber, thirdNumber ){
+  console.log('in multiplyThree right now');
+  let totalSum = firstNumber * secondNumber * thirdNumber;
+  return totalSum;
+}//end of multiplyThree
 
-}
-
+multiplyThree();
+console.log('muliplying, 3, 6 and 7 =', multiplyThree(3, 6, 7));
+console.log('muliplying, 14, 32 and 99 =', multiplyThree(14, 32, 99));
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
