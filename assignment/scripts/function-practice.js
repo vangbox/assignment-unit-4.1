@@ -19,11 +19,13 @@ hello();
 function helloName( name ) {
   console.log('in helloName');
   let myName = name;
-  return myName;
+  return name;
 }
+
+
 // Remember to call the function to test
 helloName();
-console.log("Hello", helloName("Jake"));
+console.log(helloName("Hello, Jake"));
 
 // 3. Function to add two numbers together & return the result
 function addNumbers(firstNumber, secondNumber) {
